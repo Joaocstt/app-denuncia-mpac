@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { theme } from './src/theme/theme';
 
-import AppNavigator from './src/app/AppNavigator';
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
