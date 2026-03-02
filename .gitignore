@@ -1,0 +1,43 @@
+# Dependencies
+**/node_modules/
+**/vendor/
+
+# Environment
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Expo / React Native
+app-denuncia/.expo/
+app-denuncia/dist/
+app-denuncia/npm-debug.log*
+app-denuncia/yarn-debug.log*
+app-denuncia/yarn-error.log*
+
+# Laravel / PHP
+back-end-app/composer.phar
+back-end-app/storage/*.key
+back-end-app/public/storage
+back-end-app/storage/framework/cache/data/*
+back-end-app/storage/framework/sessions/*
+back-end-app/storage/framework/testing/*
+back-end-app/storage/framework/views/*
+back-end-app/storage/logs/*
+back-end-app/bootstrap/cache/*
+back-end-app/.phpunit.result.cache
+
+# Docker
+.docker/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Temporary
+tmp/
+temp/
