@@ -1,34 +1,13 @@
 services:
   app:
     build: .
-    container_name: denuncia-backend
+    container_name: app-denuncia-backend
     ports:
       - "8000:80"
+    networks:
+      - proxy
     volumes:
       - .:/laravel
-    working_dir: /laravel
-    depends_on:
-      - db
-    networks:
-      - app-network
-
-  db:
-    image: postgres:15-alpine
-    container_name: denuncia-db
-    environment:
-      POSTGRES_DB: denuncia_db
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: password
-    ports:
-      - "5434:5432"
-    volumes:
-      - db-data:/var/lib/postgresql/data
-    networks:
-      - app-network
-
 networks:
-  app-network:
-    driver: bridge
-
-volumes:
-  db-data:
+  proxy:
+    external: true
